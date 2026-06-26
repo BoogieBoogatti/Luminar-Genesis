@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
+    <main className="min-h-screen bg-gray-50 p-6">
       <div className="mx-auto max-w-7xl">
         <h1 className="text-3xl font-bold mb-6">My Card Grid</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -14,9 +14,6 @@ export default function Home() {
             Third card content goes here.
           </div>
         </div>
-        <a href="/dashboard" className="mt-6 inline-block text-blue-600 underline">
-          Go to Dashboard →
-        </a>
       </div>
     </main>
   );
