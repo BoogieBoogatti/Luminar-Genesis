@@ -1,13 +1,3 @@
 export default function Home() {
-  return (
-    <main style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh',
-      fontFamily: 'system-ui, sans-serif'
-    }}>
-      <h1>Luminar Genesis is Live ✅</h1>
-    </main>
-  )
+  return <h1>Luminar Genesis is Live ✅</h1>
 }
