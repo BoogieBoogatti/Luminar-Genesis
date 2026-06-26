@@ -1,19 +1,34 @@
-const Card = ({ children }) => (
-  <div className="rounded-xl border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-    {children}
-  </div>
-);
+import React from 'react';
 
-export default function DashboardPage() {
+export default function CardGrid() {
+  const items = [
+    { id: 1, title: 'Card 1', desc: 'First card content goes here.' },
+    { id: 2, title: 'Card 2', desc: 'Second card content goes here.' },
+    { id: 3, title: 'Card 3', desc: 'Third card content goes here.' },
+  ];
+
   return (
-    <main className="min-h-screen bg-black p-8">
-      <div className="mx-auto max-w-5xl">
-        <h1 className="text-4xl font-black">Dashboard</h1>
-        <p className="mt-2 text-zinc-400">Luminar Genesis is online.</p>
-        <div className="mt-8 grid-cols-1 gap-4 md:grid-cols-3">
-          <Card>Module 1</Card>
-          <Card>Module 2</Card>
-          <Card>Module 3</Card>
+    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
+      <div className="mx-auto max-w-7xl">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          My Card Grid
+        </h1>
+        
+        {/* CORRECTED LINE: 'grid' is now included before 'grid-cols' */}
+        <div className="mt-8 grid-cols-1 gap-6 md:grid-cols-3">
+          {items.map((item) => (
+            <div 
+              key={item.id} 
+              className="rounded-xl border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md"
+            >
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                {item.title}
+              </h2>
+              <p className="text-gray-600">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </main>
