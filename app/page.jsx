@@ -1,5 +1,13 @@
 export default function Home() {
-  return <h1>Luminar Genesis is Live</h1>
+  return (
+    <main style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      height: '100vh',
+      fontFamily: 'system-ui, sans-serif'
+    }}>
+      <h1>Luminar Genesis is Live ✅</h1>
+    </main>
+  )
 }
-
-
