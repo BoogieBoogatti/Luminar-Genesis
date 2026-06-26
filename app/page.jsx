@@ -1,17 +1,23 @@
-import Link from 'next/link';
-
 export default function Home() {
+  const items = [
+    { id: 1, title: 'Card 1', desc: 'First card content goes here.' },
+    { id: 2, title: 'Card 2', desc: 'Second card content goes here.' },
+    { id: 3, title: 'Card 3', desc: 'Third card content goes here.' },
+  ];
+
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black via-zinc-950 to-black">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.25),rgba(255,255,255,0))]" />
-      <div className="z-10 flex-col items-center gap-6 p-8 text-center">
-        <h1 className="text-6xl font-black tracking-tight bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-          LUMINAR GENESIS
-        </h1>
-        <p className="max-w-md text-zinc-400">Foundation AI. Faster than v0. Cleaner than Replit.</p>
-        <Link href="/login" className="rounded-xl bg-white/10 px-8 py-3 text-lg font-bold backdrop-blur-xl transition hover:bg-white/20">
-          Enter System →
-        </Link>
+    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
+      <div className="mx-auto max-w-7xl">
+        <h1 className="text-3xl font-bold mb-6">My Card Grid</h1>
+        
+        <div className="mt-8 grid-cols-1 gap-6 md:grid-cols-3">
+          {items.map((item) => (
+            <div key={item.id} className="rounded-xl border bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
+              <p className="text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
