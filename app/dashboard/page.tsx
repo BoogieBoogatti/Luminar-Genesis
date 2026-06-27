@@ -1,16 +1,8 @@
-export default function Dashboard() {
-  return (
-    <main className="min-h-screen bg-gray-100 p-6 md:p-10">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
-        <p className="text-gray-600 mb-6">Welcome to your dashboard.</p>
-        <div className="rounded-xl border bg-white p-6 shadow-sm">
-          <p>No 404 here.</p>
-        </div>
-        <a href="/" className="mt-6 inline-block text-blue-600 underline">
-          ← Back to Home
-        </a>
-      </div>
-    </main>
-  );
-}
+<Link 
+  href="/dashboard"
+  className="mt-8 px-8 py-3 rounded-full bg-white/10 backdrop-blur-md 
+  border-white/20 text-white font-semibold transition-all duration-300 
+  hover:shadow-[0_0_25px_#00F0FF] hover:border-[#00F0FF] active:scale-95"
+>
+  Enter Dashboard →
+</Link>
