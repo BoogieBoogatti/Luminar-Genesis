@@ -3,36 +3,35 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col bg-black text-white">
-      {/* BG Glow: Gold only, top center */}
-      <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-[#FFD700]/8 blur-[200px]" />
+    <main className="min-h-screen bg-black text-white px-6 pt-12 pb-24">
+      <div className="mx-auto max-w-md">
+        
+        {/* LOGO */}
+        <div className="mb-10">
+          <Image src="/logo-full.png" alt="Luminar Genesis" width={600} height={600} priority className="w-full h-auto drop-shadow-[0_0_40px_rgba(255,215,0,.25)]"/>
+        </div>
 
-      {/* LOGO CENTER */}
-      <section className="flex flex-1 items-center justify-center px-6 pt-8 pb-32">
-        <Image 
-          src="/logo-full.png" 
-          alt="Luminar Genesis" 
-          width={500} 
-          height={500}
-          priority
-          className="h-auto w-full max-w-[420px] object-contain drop-shadow-[0_0_40px_rgba(255,215,0,.3)]"
-        />
-      </section>
+        {/* 3 BOXES */}
+        <div className="space-y-5">
+          <div className="rounded-3xl bg-[#0A0A0F] p-7 text-center border border-white/5">
+            <h3 className="text-[#FFB800] text-2xl font-bold">Fast</h3>
+            <p className="text-white/70 mt-2 text-sm">Next.js 14 + Vercel. Deploy in seconds.</p>
+          </div>
+          <div className="rounded-3xl bg-[#0A0A0F] p-7 text-center border-white/5">
+            <h3 className="text-[#00D9FF] text-2xl font-bold">Clean</h3>
+            <p className="text-white/70 mt-2 text-sm">Minimal, premium, no clutter. Just works.</p>
+          </div>
+          <div className="rounded-3xl bg-[#0A0A0F] p-7 text-center border-white/5">
+            <h3 className="text-white text-2xl font-bold">Secure</h3>
+            <p className="text-white/70 mt-2 text-sm">Built for scale. Trusted by pros.</p>
+          </div>
+        </div>
 
-      {/* 3 BUTTONS: MOBILE APP MODE */}
-      <footer className="fixed bottom-0 left-0 right-0 border-t border-white/10 bg-black/80 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-md items-center justify-around px-4 py-3">
-          <Link href="/dashboard" className="flex flex-col items-center gap-1 text-xs font-medium text-white/80 hover:text-[#FFD700]">
-            <span className="text-xl">🏠</span> Home
-          </Link>
-          <Link href="/ai" className="flex flex-col items-center gap-1 text-xs font-medium text-white/80 hover:text-[#00D9FF]">
-            <span className="text-xl">⚡</span> AI
-          </Link>
-          <Link href="/profile" className="flex flex-col items-center gap-1 text-xs font-medium text-white/80 hover:text-[#FFD700]">
-            <span className="text-xl">👤</span> Profile
-          </Link>
-        </nav>
-      </footer>
+        {/* ENTER DASHBOARD */}
+        <Link href="/dashboard" className="mt-10 block w-full rounded-full bg-gradient-to-r from-[#FFD700] to-[#00D9FF] py-4 text-center text-base font-bold text-black">
+          Enter Dashboard →
+        </Link>
+      </div>
     </main>
   );
-      }
+              }
