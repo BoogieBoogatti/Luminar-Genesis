@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"; // <-- EDIT 1: Add this top line
 
 export default function Home() {
   const modules = [
@@ -13,29 +13,26 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#03030A] text-white">
-      {/* Background Glows - Untouched, premium */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,#00F0FF15,transparent_60%)]" />
-      <div className="pointer-events-none absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[180px]" />
-      <div className="pointer-events-none absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-500  return (
-    <main className="relative min-h-screen overflow-hidden bg-[#03030A] text-white">
-
-      {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#00F0FF15,transparent_60%)]" />
-
       <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[180px]" />
-
       <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-500/10 blur-[180px]" />
 
       <section className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6">
 
-        {/* Logo Placeholder */}
-        <div className="mb-8 flex h-36 w-36 items-center justify-center rounded-full border border-cyan-400/30 bg-white/5 backdrop-blur-xl shadow-[0_0_80px_rgba(0,240,255,.3)]">
-
-          ✦
-
+        {/* EDIT 2: LOGO - Replace ✦ with Image */}
+        <div className="mb-8 flex h-36 w-36 items-center justify-center rounded-full border-cyan-400/30 bg-white/5 backdrop-blur-xl shadow-[0_0_80px_rgba(0,240,255,.3)] p-6">
+          <Image 
+            src="/logo.png" // <-- Put your Gold/Cyan L here
+            alt="Luminar Genesis Logo" 
+            width={144} 
+            height={144}
+            priority
+            className="object-contain"
+          />
         </div>
 
-        <h1 className="bg-gradient-to-r from-[#FFD700] via-white to-[#00F0FF] bg-clip-text text-center text-6xl font-black uppercase tracking-[0.30em] text-transparent md:text-8xl">
+        {/* EDIT 3: FONT - Added font-serif for old style writing */}
+        <h1 className="font-serif bg-gradient-to-r from-[#FFD700] via-white to-[#00F0FF] bg-clip-text text-center text-6xl font-bold uppercase tracking-[0.30em] text-transparent md:text-8xl">
           Luminar Genesis
         </h1>
 
@@ -44,14 +41,39 @@ export default function Home() {
         </p>
 
         <p className="mt-8 max-w-3xl text-center text-lg leading-8 text-white/70">
-          A next-generation digital ecosystem where identity, artificial
-          intelligence, learning, travel, business and opportunity converge
-          into one unified experience.
+          A next-generation digital ecosystem where identity, artificial intelligence, learning, travel, business and opportunity converge into one unified experience.
         </p>
 
         <Link
           href="/dashboard"
-          className="mt-12 rounded-full border border-cyan-400/30 bg-white/5 px-10 py-4 font-semibold backdrop-blur-xl transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_35px_#00F0FF]"
+          className="mt-12 rounded-full border-cyan-400/30 bg-white/5 px-10 py-4 font-semibold backdrop-blur-xl transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_35px_#00F0FF]"
+        >
+          Enter Dashboard →
+        </Link>
+
+        <div className="mt-24 grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {modules.map((item) => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className="rounded-3xl border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_35px_rgba(0,240,255,.25)]"
+            >
+              {/* EDIT 3b: Font on cards too to match H1 */}
+              <h2 className="text-2xl font-bold font-serif">{item.title}</h2>
+              <p className="mt-4 text-white/70">
+                {item.description}
+              </p>
+              <span className="mt-6 inline-block text-cyan-300">
+                Explore →
+              </span>
+            </Link>
+          ))}
+        </div>
+
+      </section>
+    </main>
+  );
+      }          className="mt-12 rounded-full border border-cyan-400/30 bg-white/5 px-10 py-4 font-semibold backdrop-blur-xl transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-400/10 hover:shadow-[0_0_35px_#00F0FF]"
         >
           Enter Dashboard →
         </Link>
