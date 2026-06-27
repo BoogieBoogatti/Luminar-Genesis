@@ -3,17 +3,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* BG Glow: Gold top, Cyan bottom - matches photo */}
+      {/* BG Glow: Matches your photo */}
       <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[700px] w-[700px] rounded-full bg-[#FFD700]/5 blur-[250px]" />
       <div className="pointer-events-none absolute right-0 bottom-0 h-[600px] w-[600px] rounded-full bg-[#00F0FF]/5 blur-[200px]" />
 
       <section className="relative z-10 mx-auto flex min-h-screen max-w-md flex-col items-center justify-start px-6 pt-16 pb-24">
 
-        {/* LOGO EXACT: Full photo with text inside */}
+        {/* LOGO: Full photo with text baked in */}
         <div className="mb-12 w-full">
           <Image 
-            src="/logo-full.png" // <-- Must be this filename in /public
-            alt="Luminar Genesis - Your place in the world you chose" 
+            src="/logo-full.png" 
+            alt="Luminar Genesis" 
             width={600} 
             height={600}
             priority
@@ -22,7 +22,7 @@ export default function Home() {
           />
         </div>
 
-        {/* PHOTO CARDS: Fast + Clean */}
+        {/* CARDS: Fast + Clean from your photo */}
         <div className="w-full space-y-6">
           <div className="rounded-3xl bg-[#0A0A0F] p-8 text-center border-white/5">
             <h3 className="text-3xl font-bold text-[#FFB800]">Fast</h3>
