@@ -1,40 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const modules = [
-    {
-      title: "Luminary (Lum.i)",
-      description: "Your AI companion for learning, productivity and life.",
-      href: "/luminary",
-    },
-    {
-      title: "Lumi Passport",
-      description: "Your secure digital identity and global citizen passport.",
-      href: "/passport",
-    },
-    {
-      title: "Genesis Marketplace",
-      description: "Discover services, digital products and opportunities.",
-      href: "/marketplace",
-    },
-    {
-      title: "Genesis Knowledge Bank",
-      description: "Learn AI, business, finance and emerging technologies.",
-      href: "/knowledge-bank",
-    },
-    {
-      title: "Genesis Constellation",
-      description: "Build your network, community and professional reputation.",
-      href: "/constellation",
-    },
-    {
-      title: "Genesis Air",
-      description: "Travel, relocation, visas and global opportunities.",
-      href: "/air",
-    },
+    { title: "Luminary (Lum.i)", description: "Your AI companion for learning, productivity and life.", href: "/luminary" },
+    { title: "Lumi Passport", description: "Your secure digital identity and global citizen passport.", href: "/passport" },
+    { title: "Genesis Marketplace", description: "Discover services, digital products and opportunities.", href: "/marketplace" },
+    { title: "Genesis Knowledge Bank", description: "Learn AI, business, finance and emerging technologies.", href: "/knowledge-bank" },
+    { title: "Genesis Constellation", description: "Build your network, community and professional reputation.", href: "/constellation" },
+    { title: "Genesis Air", description: "Travel, relocation, visas and global opportunities.", href: "/air" },
   ];
 
   return (
+    <main className="relative min-h-screen overflow-hidden bg-[#03030A] text-white">
+      {/* Background Glows - Untouched, premium */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,#00F0FF15,transparent_60%)]" />
+      <div className="pointer-events-none absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[180px]" />
+      <div className="pointer-events-none absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-500  return (
     <main className="relative min-h-screen overflow-hidden bg-[#03030A] text-white">
 
       {/* Background */}
