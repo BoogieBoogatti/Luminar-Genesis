@@ -5,22 +5,22 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white px-6 pt-16 pb-16">
       <div className="mx-auto max-w-md text-center">
         
-        {/* 1. LOGO - DO NOT TOUCH */}
+        {/* 1. LOGO - KEEP */}
         <Image 
           src="/logo-full.png" 
           alt="Luminar Genesis" 
           width={500} 
           height={500} 
           priority 
-          className="mx-auto w-full max-w-[380px] h-auto drop-shadow-[0_0_40px_rgba(255,215,0,.25)] mb-6"
+          className="mx-auto w-full max-w-[380px] h-auto drop-shadow-[0_0_40px_rgba(255,215,0,.25)] mb-3"
         />
 
-        {/* 2. SMALL TAGLINE - DO NOT TOUCH */}
+        {/* 2. SMALL TAGLINE - KEEP ONLY THIS ONE */}
         <p className="text-sm tracking-[0.3em] text-[#00D9FF] font-medium mb-8">
           YOUR PLACE IN THE WORLD YOU CHOSE...
         </p>
 
-        {/* 3. NEW IMAGE REPLACES THE BIG BOLD WORDS */}
+        {/* 3. IMAGE - FIXED PATH */}
         <Image 
           src="/metaverse-hero.jpg" 
           alt="Luminar Genesis Metaverse" 
@@ -28,6 +28,7 @@ export default function Home() {
           height={600} 
           className="w-full rounded-3xl mb-8 border-white/10"
           priority
+          unoptimized
         />
 
         {/* 4. PARAGRAPH - KEEP */}
