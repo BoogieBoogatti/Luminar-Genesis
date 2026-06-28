@@ -30,19 +30,4 @@ export default function Home() {
         <div className="mt-12 space-y-5 text-left">
           <div className="rounded-3xl bg-[#0A0A0F] p-6 border-white/5">
             <h3 className="text-[#FFB800] text-xl font-bold">Fast</h3>
-            <p className="text-white/70 mt-2 text-sm">Next.js 14 + Vercel. Deploy in seconds.</p>
-          </div>
-          <div className="rounded-3xl bg-[#0A0A0F] p-6 border-white/5">
-            <h3 className="text-[#00D9FF] text-xl font-bold">Clean</h3>
-            <p className="text-white/70 mt-2 text-sm">Minimal, premium, no clutter. Just works.</p>
-          </div>
-          <div className="rounded-3xl bg-[#0A0A0F] p-6 border-white/5">
-            <h3 className="text-white text-xl font-bold">Secure</h3>
-            <p className="text-white/70 mt-2 text-sm">Built for scale. Trusted by pros.</p>
-          </div>
-        </div>
-        
-      </div>
-    </main>
-  );
-}
+            <p className="
